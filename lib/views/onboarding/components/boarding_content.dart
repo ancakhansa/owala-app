@@ -7,7 +7,6 @@ class OnboardingContent extends StatelessWidget {
 
   final String text, image;
 
-
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,24 +14,24 @@ class OnboardingContent extends StatelessWidget {
         Image.asset(
           'assets/images/logo.png',
           fit: BoxFit.cover,
-          ), 
-          Spacer(),
-          Text(
-            "owala",
-            style: TextStyle(
-              color: primaryColor,
-              fontSize: getProporsionateScreenWidth(36.0),
-              fontWeight: FontWeight.bold,
-            ),
+        ),
+        Spacer(),
+        Text(
+          "Owala",
+          style: TextStyle(
+            color: primaryColor,
+            fontSize: getProporsionateScreenWidth(30),
+            fontWeight: FontWeight.bold // buat menjadi adaptif
           ),
-          SizedBox(height: 15),
-          Text(
-            text,
-            textAlign: TextAlign.center,
-             style: TextStyle(
-            color: Colors.amber
+        ),
+        SizedBox(height: 15),
+        Text(
+          text,
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: primaryColor
           ),
-          )
+        )
       ],
     );
   }
